@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 import Home from './Home';
 import Feed from './Feed';
 import Error from './Error';
 import Navbar from './Navbar';
 import Chat from './Chat';
 import Profile from './Profile';
-
+import './index.scss';
 const ReactRouterSetup = () => {
   return (
-    <Router>
+    <div>
+    <Router className = "back">
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />}/>
@@ -20,6 +20,7 @@ const ReactRouterSetup = () => {
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>
+    </div>
   );
 };
 
