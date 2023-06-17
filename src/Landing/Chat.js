@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import './Chat.scss'
 
-function Chat() {
-  return (
-    <div>Chat</div>
-  )
-}
+const ScrollLogger = () => {
+      const handleScroll = () => {
+      console.log( parseInt(document.getElementById('root').scrollTop.toFixed()));
+    };
 
-export default Chat
+  useEffect(() => {
+
+    document.getElementById('root').addEventListener('scroll', handleScroll);
+
+  }, []);
+
+  return <div id = "work">Scroll LoggerScroll LoggerScroll LoggerScroll LoggerScroll LoggerScroll LoggerScroll LoggerScroll LoggerScroll Logger</div>;
+};
+
+export default ScrollLogger;

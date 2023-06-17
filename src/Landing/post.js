@@ -20,6 +20,7 @@ const Section = () => {
 
   return (
     <section className="section">
+        
       <div className="image-container a">
         <img src={image} alt="" className="image" />
         <div className="emoji-options">

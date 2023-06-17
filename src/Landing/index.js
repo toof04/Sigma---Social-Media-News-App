@@ -7,6 +7,7 @@ import Chat from './Chat';
 import Profile from './Profile';
 import './index.scss';
 const ReactRouterSetup = () => {
+
   return (
     <div>
     <Router className = "back">

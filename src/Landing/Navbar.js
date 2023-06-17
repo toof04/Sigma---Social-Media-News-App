@@ -4,6 +4,7 @@ import './Navbar.scss';
 import logo from '../images/logo.svg'; 
 
 const Navbar = () => {
+  
   return (
     <article>
       <div className="links-left">
