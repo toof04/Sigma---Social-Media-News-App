@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+.spacetop{
+    height: 15.4vh;
+    background-color:'white';
+}
+center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.content{
+    font-size: x-large;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Josefin Sans;
+    background-color: white;
+    .feed {
+        margin-top: 1rem;
+        padding: 5rem;
+        overflow-x: scroll;
+    }
+}

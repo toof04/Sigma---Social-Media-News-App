@@ -1,0 +1,82 @@
+.section {
+    padding: 1em;
+    display: grid;
+    overflow-x: hidden;
+    grid-gap: 10px;
+    grid-template-areas:
+        'menu menu menu main main main'
+        'menu menu menu main main main'
+        ' footer footer footer footer right right';
+    border: 2px rgb(167, 167, 21) solid
+    
+}
+.a {
+    grid-area: menu;
+}
+
+.b {
+    grid-area: main;
+}
+
+.c {
+    grid-area: right;
+}
+
+.d {
+    grid-area: footer;
+}
+
+.image-container {
+    margin-bottom: 10px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+.emoji-options {
+    position: relative;
+    height: 2em;
+    bottom: 50px;
+    left: 10px;
+}
+
+.emoji {
+    margin-right: 5px;
+    font-size:1em;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+}
+.emoji:hover{
+    font-size: 1.2em;
+}
+
+.comment-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    max-height: 50%;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+.comments-container{
+    max-height: 6rem;
+    overflow-y: scroll;
+    font-size: medium;
+}
+.text-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.image-text {
+    font-size: 1.5 rem;
+    color: #666;
+    text-align: left;
+    margin-left: 1rem;
+}
