@@ -1,30 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.scss';
 import Post from './post.js';
 
-
-
 const Home = () => {
-  const [scrollPosition,setScrollPosition]=React.useState(0);
-      const handleScroll = () => {
-        console.log(window.innerHeight);
-        const selector = document.getElementById('root');
-        const root = document.querySelector('.sticky-line');;
-      root.style.setProperty('--scroll',selector.scrollTop / selector.offsetHeight - (selector.innerHeight ));
-            setScrollPosition( parseInt(document.getElementById('root').scrollTop.toFixed()));
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-    };
+  const handleScroll = () => {
+    const root = document.getElementById('root');
+    const newScrollPosition = root.scrollTop;
+
+    setScrollPosition(newScrollPosition);
+  };
 
   useEffect(() => {
-
     document.getElementById('root').addEventListener('scroll', handleScroll);
 
+    return () => {
+      document.getElementById('root').removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
   return (
     <div>
       <section className='spacetop'></section>
       <section className='content'>
-        <center className={`sticky-line ${scrollPosition < 100 ? '' : 'active'}`}>
+        <center className={`sticky-line ${scrollPosition > 100 ? 'active' : 'back'}`}>
           Discover, Engage, And Share News
         </center>
         <section className='feed'>

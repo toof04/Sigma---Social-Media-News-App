@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+
 :root {
     --scroll: 0;
 }
+
 .spacetop {
     height: 15.4vh;
     background-color: white;
@@ -22,19 +24,21 @@
         align-items: center;
         top: 16vh;
         animation: rotate 1s ease-in-out;
-        animation-play-state: paused   ;
+        animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);
         opacity: 1;
-            animation-iteration-count: 1;
-            animation-fill-mode: both;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
 
-  .sticky-line.active {
-      animation-play-state: running;
-      animation-delay: 0s;
-  }
+    .sticky-line.active {
+        animation-play-state: running;
+        animation-delay: 0s;
+    }
 
-
+    .sticky-line.back {
+        animation: rotateother 1s ease-in-out;
+    }
 
     .feed {
         margin-top: 1rem;
@@ -51,14 +55,46 @@
 }
 
 @keyframes rotate {
-    0%{transform: translate(0,0) }
+    0% {
+            transform: translate(0, 0);
+        }
     
-                10% {
-                    opacity: 0;
-                }
-                                  90% {
-                                      opacity: 0;
-                                  }
+        10% {
+            opacity: 0;
+        }
+    
+        50% {
+            transform: rotate(0);
+        }
+    
+        70% {
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translate(-480px, 200px) rotate(-90deg);
+            opacity: 1;
+        }
+}
+
+@keyframes rotateother {
     100% {
-        transform: translate(-480px,200px) rotate(-90deg); opacity: 1;  }
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0;
+    }
+    50%{
+       transform:  rotate(0);
+    }
+
+    60% {
+        opacity: 0;
+    }
+    0% {
+        transform: translate(-480px, 200px) rotate(-90deg);
+        opacity: 1;
+    }
 }
