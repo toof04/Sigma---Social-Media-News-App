@@ -26,6 +26,7 @@ const Home = () => {
       <section className='content'>
         <center className={`sticky-line ${scrollPosition > 100 ? 'active' : 'back'}`}>
           Discover, Engage, And Share News
+       
         </center>
         <section className='feed'>
           <div className='post'><Post /></div>
