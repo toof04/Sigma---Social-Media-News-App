@@ -8,8 +8,8 @@ const Home = () => {
   const handleScroll = () => {
     const root = document.getElementById('root');
     const newScrollPosition = root.scrollTop;
-
-    setScrollPosition(newScrollPosition);
+    setInterval(2000);
+    setTimeout(setScrollPosition(newScrollPosition),2000);
   };
 
   useEffect(() => {
