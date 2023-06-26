@@ -6,11 +6,13 @@ import Navbar from './Navbar';
 import Chat from './Chat';
 import Profile from './Profile';
 import './index.scss';
+import Auth from '../auth/auth';
 const ReactRouterSetup = () => {
 
   return (
     <div>
     <Router className = "back">
+      <Auth/>
       <Navbar/>
       <Routes>
         <Route exact path='/' element={<Home />}/>
