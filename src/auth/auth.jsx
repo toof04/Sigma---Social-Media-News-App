@@ -42,6 +42,7 @@ const App = () => {
       });
   };
 
+  
   const handleLogout = () => {
     authInstance.signOut()
       .then(() => {
