@@ -73,7 +73,7 @@ const Navbar = () => {
         {user ? (
           <>
           <div><h2>{user.displayName}</h2></div>
-          <div><button onClick={handleLogout} className='button-30' style={{backgroundColor:'yellow'}}>Logout</button></div></>
+          <div><button onClick ={handleLogout} className='button-30' style={{backgroundColor:'yellow'}}>Logout</button></div></>
       ) : (
         <>
           <div><Link to='/' className='button-30' onClick={handleLogin}>Login</Link></div>
