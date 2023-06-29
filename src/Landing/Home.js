@@ -81,6 +81,7 @@ const Home = () => {
                   <div className="emoji-options">
                     <span className="emoji love">❤️</span>
                     <span className="emoji sad">😢</span>
+                    
                     <span className="emoji angry">😡</span>
                   </div>
                 </div>
