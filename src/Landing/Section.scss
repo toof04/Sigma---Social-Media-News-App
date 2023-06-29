@@ -1,17 +1,20 @@
 .section {
     padding: 1em;
     display: grid;
+
     overflow-x: hidden;
+    width: 600px;
     grid-gap: 10px;
     grid-template-areas:
         'menu menu menu main main main'
         'menu menu menu main main main'
         ' footer footer footer footer right right';
-    border: 2px rgb(167, 167, 21) solid
+    border: 2px rgb(167, 167, 21) solid;
     
 }
 .a {
     grid-area: menu;
+  
 }
 
 .b {
@@ -31,26 +34,32 @@
 }
 
 .image {
-    max-width: 100%;
-    height: auto;
+    max-width: 20em;
+        max-height: 20em;
+    z-index: 99;
+    border: 0 solid #c5d9ab;
+    border-bottom-width: 20px;    
+height: auto;
 }
 
 .emoji-options {
     position: relative;
     height: 2em;
-    bottom: 50px;
+    bottom: 25px;
     left: 10px;
     z-index: 2;
 }
 
 .emoji {
     margin-right: 5px;
-    font-size:1em;
+    font-size: 1em;
     cursor: pointer;
     transition: font-size 0.3s ease;
 }
-.emoji:hover{
-    font-size: 1.2em;
+
+.emoji:hover {
+    font-size: 1.5em;
+
 }
 
 .comment-button {
@@ -76,8 +85,24 @@
 }
 
 .image-text {
-    font-size: 1.5 rem;
-    color: #666;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #000000;
     text-align: left;
     margin-left: 1rem;
+    
+}
+
+.image-description {
+    position: relative;
+        width: 20em;
+            height: 20em;
+    top: 0;
+    left: -500px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    z-index: 33;
 }
