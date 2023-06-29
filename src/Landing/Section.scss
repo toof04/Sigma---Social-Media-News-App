@@ -3,7 +3,7 @@
     display: grid;
 
     overflow-x: hidden;
-    width: 600px;
+  
     grid-gap: 10px;
     grid-template-areas:
         'menu menu menu main main main'
@@ -76,6 +76,7 @@ height: auto;
 .comments-container{
     max-height: 6rem;
     overflow-y: scroll;
+    width: 37em;
     font-size: medium;
 }
 .text-container {
