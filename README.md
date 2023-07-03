@@ -1,3 +1,10 @@
+# Screenshots
+![image](https://github.com/toof04/Sigma---Social-Media-News-App/assets/96460163/c122e049-0df7-466d-8bb8-bd16f6226cd4)
+![image](https://github.com/toof04/Sigma---Social-Media-News-App/assets/96460163/cf57594d-af2b-4980-a48e-8485a12d12b4)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
