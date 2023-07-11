@@ -96,14 +96,12 @@ height: auto;
 
 .image-description {
     position: relative;
-        width: 20em;
-            height: 20em;
-    top: 0;
+    width: 20em;
      left: -500px;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px;
-    font-size: 16px;
-    z-index: 33;
+    font-size: 17px;
+    z-index: 30;
 }
