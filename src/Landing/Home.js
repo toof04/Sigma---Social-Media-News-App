@@ -19,15 +19,16 @@ const Home = () => {
       comment: 'It makes me feel nostalgic.',
     },
   ];
-
+ 
     const [showDescription, setShowDescription] = useState(false);
 
-  const handleButtonHover = () => {
-    setShowDescription(true);
+  const descbuttonclick = () => {
+    if(showDescription) setShowDescription(false);
+    else setShowDescription(true);
   };
-
-  const handleButtonLeave = () => {
-    setShowDescription(false);
+ const handleImageError = (event) => {
+    console.log('checking if iamge is loading');
+    event.target.src = 'path-to-default-image.jpg'; // Fallback image URL
   };
   const [scrollPosition, setScrollPosition] = useState(0);
     const [articles, setArticles] = useState([]);
@@ -46,7 +47,7 @@ const Home = () => {
     const fetchNews = async () => {
       try {
         const response = await fetch(
-          'https://newsapi.org/v2/top-headlines?country=us&apiKey=feef00c59ada4fbd9546a7c97ad0fe81'
+          'https://newsapi.org/v2/top-headlines?country=in&apiKey=feef00c59ada4fbd9546a7c97ad0fe81'
           );
           const data = await response.json();
           setArticles(data.articles.slice(0, 10)); // Get the first 10 articles
@@ -76,7 +77,14 @@ const Home = () => {
             <section className="section">
  
                 <div className="image-container a">
-                  <img src={article.urlToImage} alt="Article" className="image"/>
+                               {showDescription && (
+          <div className="image-description">{article.description}</div>
+        )}
+        <img src = '"C:\Users\Toof\Documents\GitHub\Sigma\sigma\src\images\imageloader.gif"'></img>
+                  <img src={article.urlToImage} alt = {handleImageError} className="image"  onError={({ currentTarget }) => {
+    currentTarget.onerror = null; // prevents looping
+    currentTarget.src="image_path_here";
+  }}/>
 
                   <div className="emoji-options">
                     <span className="emoji love">❤️</span>
@@ -88,14 +96,14 @@ const Home = () => {
                 <div className="text-container b">
                   <p className="image-text">
                     {article.title}
+                    <br/><br/>
+                    <span onClick={descbuttonclick}>🖱️ More</span>
               </p>
-                        {showDescription && (
-          <div className="image-description">{article.description}</div>
-        )}
+           
              
                 </div>
-  <button className="comment-button c"      onMouseEnter={handleButtonHover}
-        onMouseLeave={handleButtonLeave}>Comment</button>
+  <button className="comment-button c"      onClick={descbuttonclick}
+  >Comment</button>
       <div className="comments-container d">
         {sampleComments.map((comment, index) => (
           <p key={index} className="comment">
