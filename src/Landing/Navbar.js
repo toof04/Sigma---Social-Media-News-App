@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
-// import logo from '../images/logo.svg'; 
+import logo from '../images/logo.svg'; 
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import emailjs from '@emailjs/browser';
