@@ -183,14 +183,11 @@ const handleIg = () => {
    return (
     <article>
       <div className="links-left">
-        <div><Link to='/' className='button-30' onClick={handleLogin}>Login</Link></div><br></br>
-          <div onClick={handleIg}  className='button-30'>Insta Login</div>
         <div><Link to='/' className='Link'>Home</Link></div>
         <div><Link to='/Chat' className='Link'>Chat</Link></div>
         <div><Link to='/Profile' className='Link'>Profile</Link></div>
       </div>
-          {/* //  <div className='logo'><img src = {logo} alt = "logo here" ></img> */}
-          {/* </div> */}
+            <div className='logo'><img src = {logo} alt = "logo here" ></img></div>
 
       <div className="links-right">
 
@@ -200,7 +197,8 @@ const handleIg = () => {
           <div><button onClick ={handleLogout} className='button-30' style={{backgroundColor:'yellow'}}>Logout</button></div></>
       ) : (
         <>
-          
+          <div><Link to='/' className='button-30' onClick={handleLogin}>Login</Link></div>
+          <div onClick={handleIg}  className='button-30'>Insta Login</div>
           <div><Link to='/Chat' className='button-30' style={{backgroundColor:'yellow'}}>Sign Up</Link></div>
            <Modal className="modalbox" isOpen={modalIsOpen} onClose={closeModal} />
           </>
