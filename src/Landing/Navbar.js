@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
 import logo from '../images/logo.svg'; 
@@ -86,7 +86,7 @@ const Modal = ({ isOpen, onClose }) => {
      
         <img
           src="https://seekicon.com/free-icon-download/instagram-wordmark_1.svg"
-          alt="Instagram Logo"
+          alt="Instagsram Logo"
           style={styles.logo}
         />
 

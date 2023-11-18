@@ -80,7 +80,7 @@ const Home = () => {
                                {showDescription && (
           <div className="image-description">{article.description}</div>
         )}
-        <img src = '"C:\Users\Toof\Documents\GitHub\Sigma\sigma\src\images\imageloader.gif"'></img>
+        <img src = '"C:\Users\Toof\Documents\GitHub\Sigma\sigma\src\images\imageloader.gif"'  alt="Instagram Logo"></img>
                   <img src={article.urlToImage} alt = {handleImageError} className="image"  onError={({ currentTarget }) => {
     currentTarget.onerror = null; // prevents looping
     currentTarget.src="image_path_here";
