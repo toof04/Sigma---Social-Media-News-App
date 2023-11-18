@@ -200,8 +200,8 @@ const handleIg = () => {
           <div><button onClick ={handleLogout} className='button-30' style={{backgroundColor:'yellow'}}>Logout</button></div></>
       ) : (
         <>
-{/*           
-          <div><Link to='/Chat' className='button-30' style={{backgroundColor:'yellow'}}>Sign Up</Link></div> */}
+          
+          <div><Link to='/Chat' className='button-30' style={{backgroundColor:'yellow'}}>Sign Up</Link></div>
            <Modal className="modalbox" isOpen={modalIsOpen} onClose={closeModal} />
           </>
       )}
