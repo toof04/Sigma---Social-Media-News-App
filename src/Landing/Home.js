@@ -41,7 +41,7 @@ const Home = () => {
 
   useEffect(() => {
     document.getElementById('root').addEventListener('scroll', handleScroll);
-
+    
     
     
     const fetchNews = async () => {
@@ -54,7 +54,7 @@ const Home = () => {
         } catch (error) {
           console.error('Error fetching news:', error);
         }
-      };
+        };
       
       fetchNews();
       return () => {
